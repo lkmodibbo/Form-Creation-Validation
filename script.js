@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Password Validation
             const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
-            if (!passwordPattern.test(password)) {
+            if (password.length < 8) {
                 passwordError.textContent = 'Password must contain letters, numbers, and special characters.';
                 isValid = false;
                 messages.push('Password must contain letters, numbers, and special characters.');
